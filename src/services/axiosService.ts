@@ -8,7 +8,7 @@ axiosService.interceptors.response.use(undefined, (error: AxiosError) => {
   switch (response?.status) {
     case 403:
       // Forbidden
-      throw new Error("You are not authorized to access this data.");
+      throw new Error("You are forbidden from accessing this data.");
     case 404:
       // Not found
       throw new Error("Resource not found.");

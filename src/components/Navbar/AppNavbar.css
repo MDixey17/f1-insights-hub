@@ -1,0 +1,25 @@
+.link {
+    margin: 0 16px;
+    text-decoration: none;
+    color: var(--bt-white);
+    -webkit-transition: 0.5s;
+    &:hover {
+        color: var(--bt-blue-one);
+    }
+}
+
+.active-tab {
+    color: #6ea1b9;
+    font-weight: 600;
+}
+
+@media (max-width: 976px) {
+    .link {
+        margin: 8px 0;
+        padding: 2px 0;
+    }
+
+    .nb-middle {
+        margin: 0 !important;
+    }
+}

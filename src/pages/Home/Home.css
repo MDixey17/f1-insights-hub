@@ -16,9 +16,11 @@
 }
 
 @media (max-width: 721px) {
-    .lc-container {
-        min-height: 0px;
-        max-height: 762px;
-        width: 75%;
+    .home-container {
+        .lc-container {
+            min-height: 0px;
+            max-height: 762px;
+            width: 75%;
+        }
     }
 }

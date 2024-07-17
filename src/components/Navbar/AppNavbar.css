@@ -1,11 +1,17 @@
 .link {
-    margin: 0 16px;
+    margin: 16px;
     text-decoration: none;
     color: var(--bt-white);
     -webkit-transition: 0.5s;
     &:hover {
         color: var(--bt-blue-one);
     }
+}
+
+.link-appname {
+    margin: 16px;
+    text-decoration: none;
+    color: var(--bt-white);
 }
 
 .active-tab {
@@ -17,9 +23,5 @@
     .link {
         margin: 8px 0;
         padding: 2px 0;
-    }
-
-    .nb-middle {
-        margin: 0 !important;
     }
 }

@@ -1,16 +1,14 @@
 .home-container {
     .lc-container {
+        margin: 0 16px;
+        margin-bottom: 16px;
+        min-height: 762px;
+        width: 362px;
         justify-content: flex-start;
         .lc-title {
             margin-top: 4px;
         }
     }
-}
-
-.lc-container {
-    margin: 0 16px;
-    margin-bottom: 16px;
-    min-height: 762px;
 }
 
 .home-s2 {

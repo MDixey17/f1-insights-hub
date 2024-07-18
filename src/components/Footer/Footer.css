@@ -1,0 +1,33 @@
+.footer-section {
+    .bt-s-secondary {
+        background-color: #2E3336;
+        color: var(--bt-white);
+    }
+    a {
+        -webkit-transition: 0.5s;
+        text-decoration: none;
+        color: var(--bt-white);
+        font-size: 18px;
+        &:hover {
+            color: var(--bt-blue-one);
+        }
+    }
+    img {
+        max-width: 300px;
+    }
+}
+
+.footer-ergast {
+    margin-top: 12px;
+}
+
+.footer-openf1 {
+    padding-right: 20px;
+}
+
+.footer-container {
+    .bt-s-secondary {
+        background-color: #2E3336;
+        color: var(--bt-white);
+    }
+}

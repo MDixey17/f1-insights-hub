@@ -1,0 +1,11 @@
+.driver-sec {
+    max-width: fit-content;
+}
+
+@media (max-width: 721px) {
+    .driver-sec {
+        img {
+            max-width: 100px;
+        }
+    }
+}

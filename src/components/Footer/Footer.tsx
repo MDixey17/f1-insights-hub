@@ -5,9 +5,14 @@ import "./Footer.css"
 export const Footer = () => {
   return (
     <div className="footer-container">
-      <Section direction="column" justify="center" align="center">
+      <Section direction="column" justify="center" align="center" wrap="wrap">
         <Heading size="lg">Data obtained from</Heading>
-        <Section justify="center" align="center" className="footer-section">
+        <Section
+          justify="center"
+          align="center"
+          className="footer-section"
+          wrap="wrap"
+        >
           <a
             href="https://openf1.org/"
             target="_blank"

@@ -66,10 +66,11 @@ const getPitStops = async ({
  */
 const getMeeting = async ({
   meetingId,
+  countryName,
 }: OpenF1Params): Promise<MeetingResponse> => {
   const url = new URL(`${ApiConfig.OpenF1.baseUrl}/meetings`)
 
-  URLUtils.addSearchParams(url, { meetingId })
+  URLUtils.addSearchParams(url, { meetingId, countryName })
 
   const response = await axiosService.get<MeetingResponse>(url.toString())
 

@@ -5,9 +5,10 @@ import { AppNavbar } from "./components/Navbar/AppNavbar"
 import { Home } from "./pages/Home/Home"
 import { Car } from "./pages/Car/Car"
 import { Drivers } from "./pages/Drivers/Drivers"
-import { Races } from "./pages/Races/Races"
+import { Circuits } from "./pages/Circuits/Circuits"
 import { Teams } from "./pages/Teams/Teams"
 import { Footer } from "./components/Footer/Footer"
+import { Circuit } from "./components/Circuit/Circuit"
 
 function App() {
   return (
@@ -19,8 +20,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/car" element={<Car />} />
             <Route path="/drivers" element={<Drivers />} />
-            <Route path="/races" element={<Races />} />
+            <Route path="/circuits" element={<Circuits />} />
+            <Route path="/circuits/:circuit" element={<Circuit />} />
             <Route path="/teams" element={<Teams />} />
+            <Route path="*" element={<Home />} />
           </Routes>
           <Footer />
         </>

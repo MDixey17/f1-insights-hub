@@ -1,0 +1,15 @@
+.circuit-img-card {
+    max-width: fit-content;
+
+    img {
+        width: 200px;
+    }
+}
+
+.circuits-container {
+    padding-bottom: 24px;
+}
+
+.circuit-link {
+    text-decoration: none;
+}

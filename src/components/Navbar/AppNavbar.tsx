@@ -20,20 +20,24 @@ export const AppNavbar = () => {
           Home
         </Link>
         <Link
-          to="/races"
-          className={`link ${pathname === "/races" ? "active-tab" : ""}`}
+          to="/circuits"
+          className={`link ${
+            pathname.includes("/circuits") ? "active-tab" : ""
+          }`}
         >
-          Races
+          Circuits
         </Link>
         <Link
           to="/drivers"
-          className={`link ${pathname === "/drivers" ? "active-tab" : ""}`}
+          className={`link ${
+            pathname.includes("/drivers") ? "active-tab" : ""
+          }`}
         >
           Drivers
         </Link>
         <Link
           to="/teams"
-          className={`link ${pathname === "/teams" ? "active-tab" : ""}`}
+          className={`link ${pathname.includes("/teams") ? "active-tab" : ""}`}
         >
           Teams
         </Link>

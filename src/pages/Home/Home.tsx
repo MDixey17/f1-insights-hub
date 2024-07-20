@@ -71,7 +71,11 @@ export const Home = () => {
         wrap="wrap"
         divider
       >
-        {isLoading && <Spinner size="lg" />}
+        {isLoading && (
+          <div className="home-spinner">
+            <Spinner size="lg" />
+          </div>
+        )}
         {!isLoading && (
           <>
             <ListCard title="Driver's Championship" data={driverStandings} />

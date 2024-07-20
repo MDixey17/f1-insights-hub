@@ -1,0 +1,36 @@
+.circuit-header {
+    margin-bottom: 40px;
+}
+
+.circuit-data-p {
+    font-size: 24px;
+    margin: 48px;
+}
+
+.previous-winner-container {
+    margin-left: 48px;
+
+    .bt-section {
+        padding-top: 24px;
+    }
+}
+
+.world-record-lap {
+    margin-left: 48px;
+    font-size: 24px;
+}
+
+.previous-winner-text {
+    margin-right: 24px;
+}
+
+@media (max-width: 721px) {
+    .world-record-lap {
+        margin-left: 48px;
+        font-size: 16px;
+    }
+
+    .previous-winner-text {
+        font-size: 24px;
+    }
+}

@@ -6,4 +6,5 @@ export const DriverOfTheDay: CardStat = [
   ["Charles Leclerc", 2],
   ["Oliver Bearman", 1],
   ["Lewis Hamilton", 1],
+  ["Oscar Piastri", 1],
 ]

@@ -1,0 +1,55 @@
+.team-logo-sm {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.team-logo-md {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.team-logo-lg {
+    max-height: 240px;
+    max-width: 240px;
+}
+
+.tl-container-sm {
+    width: 120px;
+    height: auto;
+}
+
+.tl-container-md {
+    width: 175px;
+    height: auto;
+}
+
+.tl-container-lg {
+    width: 275px;
+    height: auto;
+}
+
+@media (max-height: 721px) {
+    .team-logo-sm {
+        max-height: 50px;
+    }
+
+    .team-logo-md {
+        max-height: 125px;
+    }
+
+    .team-logo-lg {
+        max-height: 200px;
+    }
+
+    .tl-container-sm {
+        width: 75px;
+    }
+    
+    .tl-container-md {
+        width: 150px;
+    }
+    
+    .tl-container-lg {
+        width: 240px;
+    }
+}

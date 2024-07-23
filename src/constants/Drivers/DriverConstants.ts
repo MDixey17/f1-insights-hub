@@ -21,25 +21,44 @@ import SAR from "../../assets/drivers/SAR.avif"
 import BOT from "../../assets/drivers/BOT.avif"
 
 export const F1_DRIVERS: Map<string, string> = new Map<string, string>([
-  ["Max Verstappen", VER],
-  ["Lando Norris", NOR],
-  ["Charles Leclerc", LEC],
-  ["Carlos Sainz", SAI],
-  ["Oscar Piastri", PIA],
-  ["Sergio Perez", PER],
-  ["George Russell", RUS],
-  ["Lewis Hamilton", HAM],
+  // Alpine
+  ["Pierre Gasly", GAS],
+  ["Esteban Ocon", OCO],
+
+  // Aston Martin
   ["Fernando Alonso", ALO],
   ["Lance Stroll", STR],
-  ["Nico Hulkenberg", HUL],
-  ["Yuki Tsunoda", TSU],
-  ["Daniel Ricciardo", RIC],
+
+  // Ferrari
   ["Oliver Bearman", BEA],
-  ["Pierre Gasly", GAS],
+  ["Charles Leclerc", LEC],
+  ["Carlos Sainz", SAI],
+
+  // Haas
+  ["Nico Hulkenberg", HUL],
   ["Kevin Magnussen", MAG],
-  ["Alexander Albon", ALB],
-  ["Esteban Ocon", OCO],
-  ["Zhou Guanyu", ZHO],
-  ["Logan Sargeant", SAR],
+
+  // Mclaren
+  ["Lando Norris", NOR],
+  ["Oscar Piastri", PIA],
+
+  // Mercedes
+  ["Lewis Hamilton", HAM],
+  ["George Russell", RUS],
+
+  // RB Honda
+  ["Daniel Ricciardo", RIC],
+  ["Yuki Tsunoda", TSU],
+
+  // Red Bull Honda
+  ["Sergio Perez", PER],
+  ["Max Verstappen", VER],
+
+  // Sauber
   ["Valtteri Bottas", BOT],
+  ["Zhou Guanyu", ZHO],
+
+  // Williams
+  ["Alexander Albon", ALB],
+  ["Logan Sargeant", SAR],
 ])

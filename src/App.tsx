@@ -9,6 +9,7 @@ import { Circuits } from "./pages/Circuits/Circuits"
 import { Teams } from "./pages/Teams/Teams"
 import { Footer } from "./components/Footer/Footer"
 import { Circuit } from "./components/Circuit/Circuit"
+import { Driver } from "./components/Driver/Driver"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/car" element={<Car />} />
             <Route path="/drivers" element={<Drivers />} />
+            <Route path="/drivers/:driver" element={<Driver />} />
             <Route path="/circuits" element={<Circuits />} />
             <Route path="/circuits/:circuit" element={<Circuit />} />
             <Route path="/teams" element={<Teams />} />

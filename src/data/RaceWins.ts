@@ -7,4 +7,5 @@ export const RaceWins: CardStat = [
   ["Charles Leclerc", 1],
   ["George Russell", 1],
   ["Lewis Hamilton", 1],
+  ["Oscar Piastri", 1],
 ]

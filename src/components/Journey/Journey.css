@@ -1,0 +1,20 @@
+.journey-year-text {
+    margin-left: 16px;
+    font-weight: 600;
+    font-size: 20px;
+
+    .team-text {
+        font-weight: 300;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 721px) {
+    .journey-year-text {
+        font-size: 16px;
+
+        .team-text {
+            font-size: 12px;
+        }
+    }
+}

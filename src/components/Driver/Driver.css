@@ -1,0 +1,56 @@
+.driver-bio-container {
+    .bt-img-lg {
+        margin-top: 64px;
+        width: 400px;
+    }
+}
+
+.driver-bio {
+    max-width: 50%;
+    .driver-header {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}
+
+
+.driver-f1-text {
+    font-size: 24px;
+}
+
+
+@media (max-width: 721px) {
+    .driver-bio {
+        .driver-header {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+
+    .driver-bio-container {
+        .bt-img-lg {
+            margin-top: 16px;
+            max-width: 150px;
+        }
+    }
+
+    .driver-bio {
+        margin: 8px;
+    }
+
+    .driver-f1-career {
+        margin: 8px; 
+    }
+
+    .driver-f1-text {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+}

@@ -4,5 +4,5 @@ export const PolePositions: CardStat = [
   ["Max Verstappen", 8],
   ["Lando Norris", 2],
   ["George Russell", 2],
-  ["Charles Leclerc", 1],
+  ["Charles Leclerc", 2],
 ]

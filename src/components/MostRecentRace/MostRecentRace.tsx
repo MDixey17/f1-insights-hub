@@ -6,12 +6,12 @@ import { DriverPic } from "../DriverPic/DriverPic"
 export const MostRecentRace = () => {
   return (
     <Section justify="center" align="center" isPrimary wrap="wrap">
-      <DriverPic driverName="Oscar Piastri" caption="1st" />
-      <DriverPic driverName="Lando Norris" caption="2nd" />
-      <DriverPic driverName="Lewis Hamilton" caption="3rd" />
+      <DriverPic driverName="Lewis Hamilton" caption="1st" />
+      <DriverPic driverName="Oscar Piastri" caption="2nd" />
+      <DriverPic driverName="Charles Leclerc" caption="3rd" />
       <TrackImage
-        imagePath={F1_CIRCUITS.get("Hungary") ?? ""}
-        trackName="Hungary"
+        imagePath={F1_CIRCUITS.get("Belgium") ?? ""}
+        trackName="Belgium"
       />
     </Section>
   )

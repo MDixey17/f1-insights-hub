@@ -1,0 +1,45 @@
+.team-bio-container {
+    .tl-container-lg {
+        width: 400px;
+    }
+}
+
+.team-bio {
+    max-width: 50%;
+    .team-header {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 721px) {
+    .team-bio {
+        margin: 8px;
+        .team-header {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .team-bio-container {
+        .tl-container-lg {
+            width: 150px;
+        }
+
+        .team-logo-lg {
+            width: 150px;
+        }
+    }
+
+    .team-drivers-container {
+        .bt-heading {
+            font-size: 16px;
+        }
+    }
+}

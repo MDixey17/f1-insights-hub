@@ -10,6 +10,7 @@ import { Teams } from "./pages/Teams/Teams"
 import { Footer } from "./components/Footer/Footer"
 import { Circuit } from "./components/Circuit/Circuit"
 import { Driver } from "./components/Driver/Driver"
+import { Team } from "./components/Team/Team"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/circuits" element={<Circuits />} />
             <Route path="/circuits/:circuit" element={<Circuit />} />
             <Route path="/teams" element={<Teams />} />
+            <Route path="/teams/:team" element={<Team />} />
             <Route path="*" element={<Home />} />
           </Routes>
           <Footer />

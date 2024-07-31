@@ -14,7 +14,7 @@ import { Team } from "./components/Team/Team"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/f1-insights-hub">
       <LoadingProvider>
         <>
           <AppNavbar />

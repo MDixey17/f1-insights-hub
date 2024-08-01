@@ -245,11 +245,12 @@ export const F1_CIRCUIT_DATA: CircuitData[] = [
       time: "1:16.627",
     },
     recentWinners: [
+      { driver: "Oscar Piastri", year: "2024" },
       { driver: "Max Verstappen", year: "2023" },
       { driver: "Max Verstappen", year: "2022" },
       { driver: "Esteban Ocon", year: "2021" },
     ],
-    raceResults: [],
+    raceResults: ["Oscar Piastri", "Lando Norris", "Lewis Hamilton"],
   },
   {
     trackName: "Belgium",
@@ -264,11 +265,12 @@ export const F1_CIRCUIT_DATA: CircuitData[] = [
       time: "1:46.286",
     },
     recentWinners: [
+      { driver: "Lewis Hamilton", year: "2024" },
       { driver: "Max Verstappen", year: "2023" },
       { driver: "Max Verstappen", year: "2022" },
       { driver: "Max Verstappen", year: "2021" },
     ],
-    raceResults: [],
+    raceResults: ["Lewis Hamilton", "Oscar Piastri", "Charles Leclerc"],
   },
   {
     trackName: "Netherlands",

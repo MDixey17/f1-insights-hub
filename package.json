@@ -6,7 +6,7 @@
   "homepage": "https://mdixey17.github.io/f1-insights-hub/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build --base=/f1-insights-hub",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

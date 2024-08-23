@@ -1,14 +1,10 @@
-import { Service } from "../models/API/Service";
+import { Service } from "../models/API/Service"
 
-const Ergast: Service = {
-  baseUrl: "http://ergast.com/api/f1",
-};
-
-const OpenF1: Service = {
-  baseUrl: "https://api.openf1.org/v1",
-};
+const F1Insights: Service = {
+  // baseUrl: "http://localhost:5125/api",
+  baseUrl: "https://f1-insights-api.azurewebsites.net/api",
+}
 
 export const ApiConfig = {
-  Ergast,
-  OpenF1,
-};
+  F1Insights,
+}

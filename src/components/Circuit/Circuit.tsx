@@ -1,4 +1,4 @@
-import { Heading, Section } from "blue-titanium-ui"
+import { Heading, Section, Spinner } from "blue-titanium-ui"
 import { useParams } from "react-router-dom"
 import { TrackImage } from "../TrackImage/TrackImage"
 import { F1_CIRCUITS } from "../../constants/Circuits/CircuitConstants"
@@ -6,17 +6,32 @@ import { Podium } from "../Podium/Podium"
 import { CircuitUtils } from "../../utils/circuitUtils"
 import "./Circuit.css"
 import { DriverPic } from "../DriverPic/DriverPic"
+import { useEffect, useState } from "react"
+import { CircuitResponse } from "../../models/F1Insights/CircuitResponse"
+import { useLoadingContext } from "../../contexts/LoadingContext"
+import { F1InsightsService } from "../../services/f1InsightsService"
 
 export const Circuit = () => {
   const { circuit } = useParams()
-  const circuitData = CircuitUtils.getCircuitData(circuit ?? "")
+  const [isLoading, setLoading] = useLoadingContext()
+  const [circuitData, setCircuitData] = useState<CircuitResponse | undefined>(
+    undefined
+  )
 
-  // TODO:
-  // 1. DONE
-  // 2. DONE
-  // 3. New section - Previous Winners - get default driver pic if the driver is retired (unlikely with Hamilton and Verstappen)
-  // 4. World Record Lap - who, when, and the record
-  // 5. Styling changes
+  useEffect(() => {
+    const getCircuitData = async () => {
+      setLoading(true)
+      const circuitResponse = await F1InsightsService.getCircuitByLocation(
+        circuit ?? "Miami"
+      )
+      setCircuitData(circuitResponse)
+      setLoading(false)
+    }
+
+    getCircuitData()
+  }, [setLoading, circuit])
+
+  const currentYear = new Date().getFullYear()
 
   return (
     <>
@@ -27,25 +42,41 @@ export const Circuit = () => {
         align="center"
         divider
       >
-        <Heading isBlue size="xl" className="circuit-header">
-          {circuitData?.grandPrixName}
-        </Heading>
-        {circuitData && circuitData.raceResults.length > 0 && (
-          <Section isPrimary justify="space-evenly" align="center" wrap="wrap">
-            <div>
-              <Podium podium={circuitData?.raceResults ?? []} />
-            </div>
-            <TrackImage
-              imagePath={F1_CIRCUITS.get(circuit ?? "") ?? ""}
-              trackName={""}
-            />
-          </Section>
-        )}
-        {circuitData && circuitData.raceResults.length === 0 && (
-          <TrackImage
-            imagePath={F1_CIRCUITS.get(circuit ?? "") ?? ""}
-            trackName={""}
-          />
+        {isLoading && <Spinner size="lg" />}
+        {!isLoading && circuitData && (
+          <>
+            <Heading isBlue size="xl" className="circuit-header">
+              {circuitData?.grandPrixName}
+            </Heading>
+            {circuitData && circuitData.previousResults.length > 0 && (
+              <Section
+                isPrimary
+                justify="space-evenly"
+                align="center"
+                wrap="wrap"
+              >
+                <div>
+                  <Podium
+                    results={
+                      circuitData.previousResults.find(
+                        (result) => result.year === currentYear
+                      )?.driverResults ?? []
+                    }
+                  />
+                </div>
+                <TrackImage
+                  imagePath={F1_CIRCUITS.get(circuit ?? "") ?? ""}
+                  trackName={""}
+                />
+              </Section>
+            )}
+            {circuitData && circuitData.previousResults.length === 0 && (
+              <TrackImage
+                imagePath={F1_CIRCUITS.get(circuit ?? "") ?? ""}
+                trackName={""}
+              />
+            )}
+          </>
         )}
       </Section>
       {circuitData && (
@@ -62,8 +93,8 @@ export const Circuit = () => {
             </Heading>
             <div>
               <p className="circuit-data-p">
-                <strong>Location: </strong>
-                {circuitData.trackName}
+                <strong>Track Name: </strong>
+                {circuitData.name}
                 <br />
                 <br />
                 <strong>Number of Laps: </strong>
@@ -71,7 +102,7 @@ export const Circuit = () => {
                 <br />
                 <br />
                 <strong>Circuit Length: </strong>
-                {circuitData.circuitLength} km
+                {circuitData.length} km
                 <br />
                 <br />
                 <strong>Race Distance: </strong>
@@ -86,10 +117,12 @@ export const Circuit = () => {
                 <Heading size="xl" isBlue className="previous-winner-text">
                   Previous Winners
                 </Heading>
-                {circuitData.recentWinners.map((recentWinner) => (
+                {CircuitUtils.getPreviousWinners(
+                  circuitData.previousResults
+                ).map((recentWinner) => (
                   <DriverPic
-                    driverName={recentWinner.driver}
-                    caption={recentWinner.year}
+                    driverName={recentWinner.driverName}
+                    caption={recentWinner.year.toString()}
                     size="sm"
                     textSize="lg"
                   />
@@ -99,9 +132,9 @@ export const Circuit = () => {
             <div>
               <p className="world-record-lap">
                 <strong>World Record: </strong>
-                {circuitData.fastestLap.driver}{" "}
-                {`(${circuitData.fastestLap.year})`} -{" "}
-                {circuitData.fastestLap.time}
+                {circuitData.worldRecord.driverName}{" "}
+                {`(${circuitData.worldRecord.year})`} -{" "}
+                {circuitData.worldRecord.time}
               </p>
             </div>
           </Section>

@@ -1,31 +1,26 @@
-import { F1_TEAM_DATA } from "../data/Teams"
-import { TeamData } from "../models/Data/TeamData/TeamData"
-import { ConstructorStandings } from "../models/Ergast/Standings/ConstructorStandings"
+import { ConstructorStandingsDetails } from "../models/F1Insights/ConstructorStandingsResponse"
 
 const constructorStandingsToMap = (
-  standings: ConstructorStandings[]
+  standings: ConstructorStandingsDetails[]
 ): (string | number)[][] => {
   const data: (string | number)[][] = []
 
-  for (let i = 0; i < standings.length; i++) {
-    data.push([
-      standings[i].Constructor.Name._text,
-      standings[i]._attributes.points,
-    ])
+  const sortedStandings = standings.sort((a, b) => {
+    if (a.position < b.position) {
+      return -1
+    } else if (a.position > b.position) {
+      return 1
+    }
+    return 0
+  })
+
+  for (let i = 0; i < sortedStandings.length; i++) {
+    data.push([sortedStandings[i].constructorName, sortedStandings[i].points])
   }
 
   return data
 }
 
-const getConstructorData = (name: string): TeamData | undefined => {
-  const team = F1_TEAM_DATA.filter((team) => team.displayName === name)
-  if (team.length > 0) {
-    return team[0]
-  }
-  return undefined
-}
-
 export const ConstructorUtils = {
   constructorStandingsToMap,
-  getConstructorData,
 }

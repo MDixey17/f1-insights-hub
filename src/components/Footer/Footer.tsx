@@ -1,35 +1,11 @@
 import { Heading, Section } from "blue-titanium-ui"
-import OpenF1 from "../../assets/logos/openf1.png"
 import "./Footer.css"
 
 export const Footer = () => {
   return (
     <div className="footer-container">
       <Section direction="column" justify="center" align="center" wrap="wrap">
-        <Heading size="lg">Data obtained from</Heading>
-        <Section
-          justify="center"
-          align="center"
-          className="footer-section"
-          wrap="wrap"
-        >
-          <a
-            href="https://openf1.org/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="footer-openf1"
-          >
-            <img src={OpenF1} alt="OpenF1 API" />
-          </a>
-          <a
-            href="http://ergast.com/mrd/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="footer-ergast"
-          >
-            Ergast API (deprecated)
-          </a>
-        </Section>
+        <Heading size="lg">Data obtained from F1 Insights API project.</Heading>
       </Section>
     </div>
   )

@@ -43,7 +43,7 @@ export const MostRecentRace = () => {
 
   return (
     <Section justify="center" align="center" isPrimary wrap="wrap">
-      {isLoading && <Spinner size="lg" />}
+      {isLoading && <Spinner size="lg" className="home-spinner" />}
       {!isLoading && p1 && p2 && p3 && track && (
         <>
           <DriverPic driverName={p1.driverName} caption="1st" />

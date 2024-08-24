@@ -10,8 +10,17 @@ const getPreviousWinners = (
 ): PreviousWinners[] => {
   const previousWinners: PreviousWinners[] = []
 
-  for (let i = 0; i < previousResults.length; i++) {
-    const data = previousResults[i]
+  const sorted = previousResults.sort((a, b) => {
+    if (a.year > b.year) {
+      return -1
+    } else if (a.year < b.year) {
+      return 1
+    }
+    return 0
+  })
+
+  for (let i = 0; i < sorted.length; i++) {
+    const data = sorted[i]
     const winner = data.driverResults.find((driver) => driver.position === 1)!
     previousWinners.push({ driverName: winner.driverName, year: data.year })
   }

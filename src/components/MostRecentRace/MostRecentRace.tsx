@@ -55,12 +55,16 @@ export const MostRecentRace = () => {
           />
         </>
       )}
-      {!isLoading && track && (
-        <TrackImage
-          imagePath={F1_CIRCUITS.get(track) ?? ""}
-          trackName={track}
-        />
-      )}
+      {!isLoading &&
+        track &&
+        p1 === undefined &&
+        p2 === undefined &&
+        p3 === undefined && (
+          <TrackImage
+            imagePath={F1_CIRCUITS.get(track) ?? ""}
+            trackName={track}
+          />
+        )}
     </Section>
   )
 }

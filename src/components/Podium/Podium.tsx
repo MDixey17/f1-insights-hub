@@ -8,7 +8,7 @@ interface PodiumProps {
 }
 
 export const Podium = ({ results }: PodiumProps) => {
-  return (
+  return results.length > 2 ? (
     <Section direction="row" justify="space-around" isPrimary>
       <div className="podium-2nd">
         <DriverPic
@@ -35,5 +35,7 @@ export const Podium = ({ results }: PodiumProps) => {
         />
       </div>
     </Section>
+  ) : (
+    <></>
   )
 }

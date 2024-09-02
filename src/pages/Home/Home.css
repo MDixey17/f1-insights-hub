@@ -2,7 +2,7 @@
     .lc-container {
         margin: 0 16px;
         margin-bottom: 16px;
-        min-height: 762px;
+        min-height: 792px;
         width: 362px;
         justify-content: flex-start;
         .lc-title {
@@ -23,7 +23,7 @@
     .home-container {
         .lc-container {
             min-height: 0px;
-            max-height: 762px;
+            max-height: 792px;
             width: 75%;
         }
     }

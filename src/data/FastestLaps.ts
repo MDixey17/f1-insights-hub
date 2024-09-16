@@ -1,7 +1,7 @@
 import { CardStat } from "../models/Data/CardStat"
 
 export const FastestLaps: CardStat = [
-  ["Lando Norris", 3],
+  ["Lando Norris", 4],
   ["Max Verstappen", 2],
   ["Charles Leclerc", 2],
   ["Fernando Alonso", 2],

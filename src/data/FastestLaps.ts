@@ -10,4 +10,5 @@ export const FastestLaps: CardStat = [
   ["Oscar Piastri", 1],
   ["Carlos Sainz", 1],
   ["Sergio Perez", 1],
+  ["Daniel Ricciardo", 1],
 ]

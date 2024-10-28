@@ -4,7 +4,7 @@ import { CardStat } from "../models/Data/CardStat"
 export const DriverOfTheDay: CardStat = [
   ["Lando Norris", 7],
   ["Charles Leclerc", 3],
-  ["Carlos Sainz", 2],
+  ["Carlos Sainz", 3],
   ["Lewis Hamilton", 2],
   ["Oscar Piastri", 2],
   ["Oliver Bearman", 1],

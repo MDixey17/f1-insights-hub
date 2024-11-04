@@ -48,6 +48,7 @@ export const F1_DRIVERS: Map<string, string> = new Map<string, string>([
 
   // RB Honda
   ["Daniel Ricciardo", RIC],
+  ['Liam Lawson', 'https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png'],
   ["Yuki Tsunoda", TSU],
 
   // Red Bull Honda
@@ -60,5 +61,6 @@ export const F1_DRIVERS: Map<string, string> = new Map<string, string>([
 
   // Williams
   ["Alexander Albon", ALB],
+  ["Franco Colapinto", "https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FRACOL01_Franco_Colapinto/fracol01.png"],
   ["Logan Sargeant", SAR],
 ])

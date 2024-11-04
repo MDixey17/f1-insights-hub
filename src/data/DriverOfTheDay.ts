@@ -9,4 +9,5 @@ export const DriverOfTheDay: CardStat = [
   ["Oscar Piastri", 2],
   ["Oliver Bearman", 1],
   ["Daniel Ricciardo", 1],
+  ["Max Verstappen", 1]
 ]

@@ -1,7 +1,7 @@
 import { CardStat } from "../models/Data/CardStat"
 
 export const RaceWins: CardStat = [
-  ["Max Verstappen", 7],
+  ["Max Verstappen", 8],
   ["Lando Norris", 3],
   ["Charles Leclerc", 3],
   ["Lewis Hamilton", 2],
